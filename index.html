@@ -14,6 +14,79 @@
         }
         
         body {
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your existing meta tags and title -->
+    <style>
+        /* ALL YOUR EXISTING CSS STAYS HERE */
+        
+        /* ADD THE NEW BANNER CSS HERE AT THE END OF THE STYLE BLOCK */
+        /* Ratha Yatra Banner Styles */
+        .ratha-yatra-banner {
+            background: linear-gradient(135deg, #ff9933, #ff5733, #c70039);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            animation: bannerPulse 2s infinite;
+        }
+        
+        .banner-content {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .banner-close {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 1.5rem;
+            padding: 0 10px;
+        }
+        
+        .banner-close:hover {
+            color: #ffeb3b;
+        }
+        
+        @keyframes bannerPulse {
+            0% { opacity: 0.95; }
+            50% { opacity: 1; }
+            100% { opacity: 0.95; }
+        }
+        
+        @media (max-width: 768px) {
+            .ratha-yatra-banner {
+                font-size: 1rem;
+                padding: 8px 0;
+            }
+            
+            .banner-close {
+                right: 10px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ADD THE BANNER HTML RIGHT HERE - AFTER <body> BUT BEFORE <header> -->
+    <!-- Ratha Yatra Banner -->
+    <div class="ratha-yatra-banner">
+        <div class="banner-content">
+            🎉 Happy Ratha Yatra! 🎉
+            <span class="banner-close" onclick="this.parentElement.parentElement.style.display='none'">×</span>
+        </div>
+    </div>
+
+    <header>
+        <!-- Your existing header content remains unchanged -->
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
