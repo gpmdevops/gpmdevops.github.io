@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Kernel - Engineering Hub</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Linux Kernel Deep Dive</h1>
+            <p>Understanding the heart of Linux systems</p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <!-- Navigation will be auto-populated by JavaScript -->
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="process-mgmt">
+            <h2>Process Management</h2>
+            <p>How the Linux kernel creates, manages, and schedules processes.</p>
+            <h3>Key Concepts:</h3>
+            <ul>
+                <li>Process vs. Thread</li>
+                <li>Task_struct (process descriptor)</li>
+                <li>Process creation (fork, exec, clone)</li>
+                <li>Process scheduling (CFS, real-time)</li>
+                <li>Namespaces and isolation</li>
+            </ul>
+            <h3>Performance Analysis:</h3>
+            <ul>
+                <li>strace for system calls</li>
+                <li>perf for performance metrics</li>
+                <li>/proc filesystem inspection</li>
+            </ul>
+        </section>
+        
+        <section id="memory-mgmt">
+            <h2>Memory Management</h2>
+            <p>Virtual memory, paging, and memory allocation in the kernel.</p>
+            <h3>Core Mechanisms:</h3>
+            <ul>
+                <li>Virtual memory addressing</li>
+                <li>Page tables and TLBs</li>
+                <li>Memory allocation (buddy system, slab allocator)</li>
+                <li>Swapping and page cache</li>
+                <li>OOM killer and memory pressure</li>
+            </ul>
+            <h3>Tools:</h3>
+            <ul>
+                <li>vmstat, free, top</li>
+                <li>/proc/meminfo analysis</li>
+                <li>Memory profiling with Valgrind</li>
+            </ul>
+        </section>
+        
+        <section id="filesystems">
+            <h2>Filesystems</h2>
+            <p>How Linux manages files, directories, and storage.</p>
+            <h3>Architecture:</h3>
+            <ul>
+                <li>VFS (Virtual Filesystem Switch)</li>
+                <li>Inodes and dentries</li>
+                <li>Page cache and buffer cache</li>
+                <li>Journaling techniques</li>
+            </ul>
+            <h3>Filesystem Types:</h3>
+            <ul>
+                <li>ext4: Default for many distributions</li>
+                <li>XFS: High-performance journaling</li>
+                <li>Btrfs: Copy-on-write features</li>
+                <li>ZFS: Advanced features (Linux ports)</li>
+            </ul>
+        </section>
+        
+        <section id="drivers">
+            <h2>Device Drivers</h2>
+            <p>How the kernel interacts with hardware devices.</p>
+            <h3>Driver Types:</h3>
+            <ul>
+                <li>Character devices</li>
+                <li>Block devices</li>
+                <li>Network interfaces</li>
+            </ul>
+            <h3>Development:</h3>
+            <ul>
+                <li>Loadable kernel modules (LKMs)</li>
+                <li>Device trees (for embedded systems)</li>
+                <li>Userspace drivers (FUSE, UIO)</li>
+                <li>Kernel APIs and interfaces</li>
+            </ul>
+            <h3>Debugging:</h3>
+            <ul>
+                <li>printk and dynamic debug</li>
+                <li>Kernel probes (kprobes)</li>
+                <li>Crash dump analysis</li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 DevOps & Cloud Engineering Hub</p>
+        </div>
+    </footer>
+    
+    <script src="scripts/main.js"></script>
+</body>
+</html>
