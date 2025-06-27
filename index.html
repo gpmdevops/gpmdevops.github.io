@@ -3,35 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Web Page</title>
+    <title>DevOps & Cloud Engineering Hub</title>
     <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+            --success: #2ecc71;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1 {
+            padding: 0;
             color: #333;
+            background-color: #f9f9f9;
         }
-        p {
-            color: #666;
+        
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        nav {
+            background: var(--dark);
+            padding: 0.5rem 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background: var(--secondary);
+        }
+        
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-body ul {
+            padding-left: 1.5rem;
+        }
+        
+        .card-body a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .card-body a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.3rem 0;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple HTML page. You can edit it to add your own content.</p>
+    <header>
+        <div class="container">
+            <h1>DevOps & Cloud Engineering Hub</h1>
+            <p>Comprehensive resources for DevOps practices, Cloud technologies, and Linux Kernel internals</p>
+        </div>
+    </header>
     
-    <h2>About This Page</h2>
-    <p>This is a basic template that includes:</p>
-    <ul>
-        <li>HTML5 structure</li>
-        <li>Basic styling with CSS</li>
-        <li>Responsive meta tag</li>
-        <li>Clean, simple layout</li>
-    </ul>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="devops-tools.html">DevOps Tools</a></li>
+            <li><a href="cloud-resources.html">Cloud Resources</a></li>
+            <li><a href="linux-kernel.html">Linux Kernel</a></li>
+            <!-- Additional pages will automatically appear here -->
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section>
+            <h2>Welcome to the Engineering Hub</h2>
+            <p>This site serves as a centralized resource for DevOps engineers, cloud architects, and Linux kernel enthusiasts. Explore our collection of tools, tutorials, and deep dives into system internals.</p>
+        </section>
+        
+        <div class="card-container">
+            <div class="card">
+                <div class="card-header">
+                    DevOps Tools
+                </div>
+                <div class="card-body">
+                    <p>Comprehensive guides and resources for modern DevOps toolchain:</p>
+                    <ul>
+                        <li><a href="devops-tools.html#ci-cd">CI/CD Pipelines</a></li>
+                        <li><a href="devops-tools.html#containerization">Containerization</a></li>
+                        <li><a href="devops-tools.html#orchestration">Orchestration</a></li>
+                        <li><a href="devops-tools.html#iac">Infrastructure as Code</a></li>
+                    </ul>
+                    <a href="devops-tools.html" class="btn">Explore DevOps Tools →</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    Cloud Resources
+                </div>
+                <div class="card-body">
+                    <p>Deep dives into cloud platforms and architectures:</p>
+                    <ul>
+                        <li><a href="cloud-resources.html#aws">AWS Services</a></li>
+                        <li><a href="cloud-resources.html#azure">Azure Solutions</a></li>
+                        <li><a href="cloud-resources.html#gcp">GCP Offerings</a></li>
+                        <li><a href="cloud-resources.html#multi-cloud">Multi-Cloud Strategies</a></li>
+                    </ul>
+                    <a href="cloud-resources.html" class="btn">Explore Cloud Resources →</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    Linux Kernel
+                </div>
+                <div class="card-body">
+                    <p>Understanding the heart of Linux systems:</p>
+                    <ul>
+                        <li><a href="linux-kernel.html#process-mgmt">Process Management</a></li>
+                        <li><a href="linux-kernel.html#memory-mgmt">Memory Management</a></li>
+                        <li><a href="linux-kernel.html#filesystems">Filesystems</a></li>
+                        <li><a href="linux-kernel.html#drivers">Device Drivers</a></li>
+                    </ul>
+                    <a href="linux-kernel.html" class="btn">Explore Linux Kernel →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 DevOps & Cloud Engineering Hub. All rights reserved.</p>
+            <p>Hosted on GitHub Pages</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript to automatically update navigation -->
+    <script>
+        // This script will automatically add new pages to the navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // List of known pages (you can expand this)
+            const pages = [
+                { name: 'Home', url: 'index.html' },
+                { name: 'DevOps Tools', url: 'devops-tools.html' },
+                { name: 'Cloud Resources', url: 'cloud-resources.html' },
+                { name: 'Linux Kernel', url: 'linux-kernel.html' }
+                // Add new pages here as you create them
+            ];
+            
+            const nav = document.querySelector('nav ul');
+            
+            // Clear existing navigation (except for the first item which is Home)
+            nav.innerHTML = '';
+            
+            // Add all pages to navigation
+            pages.forEach(page => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = page.url;
+                a.textContent = page.name;
+                
+                // Highlight current page
+                if (window.location.pathname.endsWith(page.url)) {
+                    a.classList.add('active');
+                }
+                
+                li.appendChild(a);
+                nav.appendChild(li);
+            });
+        });
+    </script>
 </body>
 </html>
