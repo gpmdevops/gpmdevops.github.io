@@ -14,14 +14,14 @@
         }
         
         body {
-            <!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Your existing meta tags and title -->
-    <style>
-        /* ALL YOUR EXISTING CSS STAYS HERE */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
         
-        /* ADD THE NEW BANNER CSS HERE AT THE END OF THE STYLE BLOCK */
         /* Ratha Yatra Banner Styles */
         .ratha-yatra-banner {
             background: linear-gradient(135deg, #ff9933, #ff5733, #c70039);
@@ -60,39 +60,6 @@
             0% { opacity: 0.95; }
             50% { opacity: 1; }
             100% { opacity: 0.95; }
-        }
-        
-        @media (max-width: 768px) {
-            .ratha-yatra-banner {
-                font-size: 1rem;
-                padding: 8px 0;
-            }
-            
-            .banner-close {
-                right: 10px;
-                font-size: 1.2rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- ADD THE BANNER HTML RIGHT HERE - AFTER <body> BUT BEFORE <header> -->
-    <!-- Ratha Yatra Banner -->
-    <div class="ratha-yatra-banner">
-        <div class="banner-content">
-            🎉 Happy Ratha Yatra! 🎉
-            <span class="banner-close" onclick="this.parentElement.parentElement.style.display='none'">×</span>
-        </div>
-    </div>
-
-    <header>
-        <!-- Your existing header content remains unchanged -->
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #f9f9f9;
         }
         
         header {
@@ -205,10 +172,28 @@
             nav ul li {
                 margin: 0.3rem 0;
             }
+            
+            .ratha-yatra-banner {
+                font-size: 1rem;
+                padding: 8px 0;
+            }
+            
+            .banner-close {
+                right: 10px;
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Ratha Yatra Banner -->
+    <div class="ratha-yatra-banner">
+        <div class="banner-content">
+            🎉 Happy Ratha Yatra! 🎉
+            <span class="banner-close" onclick="this.parentElement.parentElement.style.display='none'">×</span>
+        </div>
+    </div>
+
     <header>
         <div class="container">
             <h1>DevOps & Cloud Engineering Hub</h1>
@@ -286,7 +271,7 @@
     <footer>
         <div class="container">
             <p>© 2023 DevOps & Cloud Engineering Hub. All rights reserved.</p>
-            <p>@techyprasanna</p>
+            <p>Hosted on GitHub Pages</p>
         </div>
     </footer>
 
